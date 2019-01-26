@@ -2,7 +2,7 @@
 
 int main(void) {
 	char a[10];
-	int i,flag=0,j;
+	int i,check=0,j;
 	scanf("%s",a);
 	for(i=0;a[i]!='\0';i++)
 	{
@@ -11,15 +11,15 @@ int main(void) {
 			if(a[i]==a[j])
 			{
 				printf("no");
-				flag=1;
+				check=1;
 				break;
 			}
 		}
-		if(flag==1)
+		if(check==1)
 		break;
 	}
 
-if(flag==0)
+if(check==0)
 {
 	printf("yes");
 }
