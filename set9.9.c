@@ -1,32 +1,23 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
+#include <stdio.h>
+
+int main()
 {
-int a,i=0,j,k,temp,rem,b[100];
-clrscr();
-scanf("%d",&a);
-  while(a!=0)
-  {
-    rem=a%10;
-    b[i]=rem;
-    i++;
-    a=a/10;
-  }
-  for(j=0;j<i;j++)
+    char a[100];
+    int i,j,max;
+    scanf("%s",a);
+    max=a[0];
+    for(i=0;a[i]!='\0';i++)
 {
-for(k=j+1;k<i;k++)
+for(j=i+1;a[j]!='\0';j++)
 {
-if(b[j]>b[k])
+if(a[i]>a[j])
 {
-temp=b[k];
-b[j]=b[k];
-b[k]=temp;
+max=a[i];
+a[i]=a[j];
+a[j]=max;
 }
 }
 }
- for(j=0;j<i;j++)
- {
-    printf("%d",b[j]);
- }
-  return 0;
+    printf("%s",a);
+    return 0;
 }
